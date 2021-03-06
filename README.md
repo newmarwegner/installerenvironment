@@ -24,11 +24,12 @@ At the end of process will be created a virtualenv with pip installed packages a
 
 ## Steps to execute:
 1. Open terminal
-2. Go into /script_to_run
-3. Set permissions to bashes files
-4. run first gis_install.sh
-5. Close terminal and reopen a new one
-6. Run dev_install.sh
+2. Clone Repo   
+3. Go into /script_to_run
+4. Set permissions to bashes files
+5. run first gis_install.sh
+6. Close terminal and reopen a new one
+7. Run dev_install.sh
 
 ## Codes
 ```
