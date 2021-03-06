@@ -19,7 +19,7 @@ At the end of process will be created a virtualenv with pip installed packages a
 - Shapely
 
 
-  ** The script insert a function in bachrc to automate activate venv when 
+  ** The script insert a function in bachrc to automate venv activate when 
   inside a folder has a .venv folder**
 
 ## Steps to execute:
