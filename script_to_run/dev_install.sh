@@ -17,7 +17,7 @@ echo '     ###############################################'
 cat >>/home/$username/.bashrc << 'EOF'
 _virtualenv_auto_activate() {
     if [ -e ".venv" ]; then
-         Check to see if already activated to avoid redundant activating
+         #Check to see if already activated to avoid redundant activating
         if [ "$VIRTUAL_ENV" != "$(pwd -P)/.venv" ]; then
             _VENV_NAME=$(basename `pwd`)
             echo Activating virtualenv \"$_VENV_NAME\"...
