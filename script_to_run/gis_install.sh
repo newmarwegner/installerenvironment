@@ -50,6 +50,6 @@ echo 'eval "$(pyenv virtualenv-init -)"'>>/home/$username/.bashrc
 curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | sudo -u $username bash
 
 echo "Running DEV set up."
-sudo $username -c "./dev_install.sh"
+su $username -c "./dev_install.sh"
 #gnome-terminal -e 'bash -c "./dev_install.sh; bash"'
 #gnome-terminal -- bash -c "./dev_install.sh && bash"
