@@ -34,4 +34,6 @@ git clone https://github.com/newmarwegner/installerenvironment.git
 cd /script_to_run
 chmod +x gis_install.sh dev_install.sh
 ./gis_install.sh
+***!!!ATENTION!!! There is a moment near of the end on runing script (after pycharm instalation) 
+thats you need authenticate you user***
 ```
