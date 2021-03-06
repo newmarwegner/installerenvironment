@@ -51,5 +51,3 @@ curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv
 
 echo "Running DEV set up."
 su $username -c "./dev_install.sh"
-#gnome-terminal -e 'bash -c "./dev_install.sh; bash"'
-#gnome-terminal -- bash -c "./dev_install.sh && bash"

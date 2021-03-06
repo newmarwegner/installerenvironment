@@ -1,4 +1,4 @@
-# Automate bash installer   
+# Automate enviroment instalations    
 Bash file to install gis and dev softwares in Ubuntu 20.04.
 
 ### Softwares that will be installed:
@@ -18,7 +18,7 @@ At the end of process will be created a virtualenv with pip installed packages a
 - rasterio
 - Shapely
 
-  ** The script insert a function in bachrc to automate venv activate when 
+  ** The script insert a function in bashrc to automate venv activate when 
   inside a folder has a .venv folder**
 
 ## Steps to execute:
@@ -34,6 +34,6 @@ git clone https://github.com/newmarwegner/installerenvironment.git
 cd /script_to_run
 chmod +x gis_install.sh dev_install.sh
 ./gis_install.sh
-***!!!ATENTION!!! There is a moment near of the end on runing script (after pycharm instalation) 
+***!!!Warning!!! There is a moment near of the end on runing script (after pycharm instalation) 
 thats you need authenticate you user***
 ```
