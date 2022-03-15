@@ -10,7 +10,7 @@ echo '### ADD Repository in etc and Installing QGIS SOFTWARE ###'
 echo '##########################################################'
 echo '     ###############################################'
 
-echo " deb https://qgis.org/ubuntu-ltr $(lsb_release -s -c) main" >> /etc/apt/sources.list
+sudo echo " deb https://qgis.org/debian-ltr $(lsb_release -s -c) main" >> /etc/apt/sources.list
 wget -O - https://qgis.org/downloads/qgis-2021.gpg.key | gpg --import
 gpg --fingerprint 46B5721DBBD2996A
 gpg --export --armor 46B5721DBBD2996A | sudo gpg --no-default-keyring --keyring gnupg-ring:/etc/apt/trusted.gpg.d/qgis-archive.gpg --import
