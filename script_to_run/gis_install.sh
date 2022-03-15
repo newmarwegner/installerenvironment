@@ -4,16 +4,16 @@ echo '### Update, Upgrading and Installing required packages ###'
 echo '##########################################################'
 echo '     ###############################################'
 sudo apt update && sudo apt upgrade -y
-sudo apt install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev git
+sudo apt install -y pip make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev git
 
 echo '### ADD Repository in etc and Installing QGIS SOFTWARE ###'
 echo '##########################################################'
 echo '     ###############################################'
 
 echo " deb https://qgis.org/ubuntu-ltr $(lsb_release -s -c) main" >> /etc/apt/sources.list
-wget -O - https://qgis.org/downloads/qgis-2020.gpg.key | gpg --import
-gpg --fingerprint F7E06F06199EF2F2
-gpg --export --armor F7E06F06199EF2F2 | sudo gpg --no-default-keyring --keyring gnupg-ring:/etc/apt/trusted.gpg.d/qgis-archive.gpg --import
+wget -O - https://qgis.org/downloads/qgis-2021.gpg.key | gpg --import
+gpg --fingerprint 46B5721DBBD2996A
+gpg --export --armor 46B5721DBBD2996A | sudo gpg --no-default-keyring --keyring gnupg-ring:/etc/apt/trusted.gpg.d/qgis-archive.gpg --import
 chmod a+r /etc/apt/trusted.gpg.d/qgis-archive.gpg
 sudo apt update
 sudo apt install qgis qgis-plugin-grass -y
