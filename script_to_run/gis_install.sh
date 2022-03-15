@@ -10,11 +10,12 @@ echo '### ADD Repository in etc and Installing QGIS SOFTWARE ###'
 echo '##########################################################'
 echo '     ###############################################'
 
-sudo echo "deb https://qgis.org/debian-ltr $(lsb_release -s -c) main" >> /etc/apt/sources.list
-wget -O - https://qgis.org/downloads/qgis-2021.gpg.key | gpg --import
-gpg --fingerprint 46B5721DBBD2996A
-gpg --export --armor 46B5721DBBD2996A | sudo gpg --no-default-keyring --keyring gnupg-ring:/etc/apt/trusted.gpg.d/qgis-archive.gpg --import
-chmod a+r /etc/apt/trusted.gpg.d/qgis-archive.gpg
+distro="deb https://qgis.org/ubuntu-ltr $(lsb_release -s -c) main" 
+sudo sh -c 'echo "deb https://qgis.org/ubuntu-ltr $(lsb_release -s -c) main"  > /etc/apt/sources.list.d/qgis.list && sudo apt update'
+wget -qO - https://qgis.org/downloads/qgis-2021.gpg.key | sudo gpg --no-default-keyring --keyring gnupg-ring:/etc/apt/trusted.gpg.d/qgis-archive.gpg --import
+sudo chmod a+r /etc/apt/trusted.gpg.d/qgis-archive.gpg
+sudo add-apt-repository "deb https://qgis.org/ubuntu-ltr $(lsb_release -c -s) main"
+
 sudo apt update
 sudo apt install qgis qgis-plugin-grass -y
 
@@ -45,8 +46,8 @@ echo '     ###############################################'
 
 username=$(logname)
 echo 'export PATH="/home/'$username'/.pyenv/bin:$PATH"'>>/home/$username/.bashrc
-echo 'eval "$(pyenv init --path)"'>>/home/$username/.bashrc
-echo 'eval "$(pyenv virtualenv-init --path)"'>>/home/$username/.bashrc
+echo 'eval "$(pyenv init -)"'>>/home/$username/.bashrc
+echo 'eval "$(pyenv virtualenv-init -)"'>>/home/$username/.bashrc
 curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | sudo -u $username bash
 
 echo "Running DEV set up."
