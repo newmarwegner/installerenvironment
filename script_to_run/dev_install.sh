@@ -42,7 +42,7 @@ cd /home/$username/Downloads/python_projects/basic_env/
 python -m venv .venv
 source .venv/bin/activate
 pip install --upgrade pip
-pip install jupyter lab
+pip install jupyterlab
 pip install pandas
 pip install geopandas
 pip install matplotlib
