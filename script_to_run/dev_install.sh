@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 export PATH="/home/$USER/.pyenv/bin:$PATH"
-eval "$(/home/$USER/.pyenv/bin/pyenv init -)"
-eval "$(/home/$USER/.pyenv/bin/pyenv virtualenv-init -)"
+eval "$(/home/$USER/.pyenv/bin/pyenv init --path)"
+eval "$(/home/$USER/.pyenv/bin/pyenv virtualenv-init --path)"
 echo '######## Installing Python 3.9.0 and set as global #######'
 echo '##########################################################'
 echo '     ###############################################'
