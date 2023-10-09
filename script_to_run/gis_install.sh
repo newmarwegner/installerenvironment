@@ -45,8 +45,8 @@ echo '     ###############################################'
 
 username=$(logname)
 echo 'export PATH="/home/'$username'/.pyenv/bin:$PATH"'>>/home/$username/.bashrc
-echo 'eval "$(pyenv init --path)"'>>/home/$username/.bashrc
-echo 'eval "$(pyenv virtualenv-init --path)"'>>/home/$username/.bashrc
+echo 'eval "$(pyenv init -)"'>>/home/$username/.bashrc
+echo 'eval "$(pyenv virtualenv-init -)"'>>/home/$username/.bashrc
 curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | sudo -u $username bash
 
 echo "Running DEV set up."
