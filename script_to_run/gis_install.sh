@@ -10,10 +10,11 @@ echo '### ADD Repository in etc and Installing QGIS SOFTWARE ###'
 echo '##########################################################'
 echo '     ###############################################'
 
-sudo sh -c 'echo "deb https://qgis.org/ubuntu-ltr $(lsb_release -s -c) main"  > /etc/apt/sources.list.d/qgis.list && sudo apt update'
-wget -qO - https://qgis.org/downloads/qgis-2021.gpg.key | sudo gpg --no-default-keyring --keyring gnupg-ring:/etc/apt/trusted.gpg.d/qgis-archive.gpg --import
-sudo chmod a+r /etc/apt/trusted.gpg.d/qgis-archive.gpg
-sudo add-apt-repository "deb https://qgis.org/ubuntu-ltr $(lsb_release -c -s) main"
+#sudo sh -c 'echo -e "Types: deb deb-src\nURIs: https://qgis.org/ubuntu-ltr\nSuites: jammy\nArchitectures: amd64\nComponents: main\nSigned-By: /etc/apt/keyrings/qgis-archive-keyring.gpg"  > /etc/apt/sources.list.d/qgis.list && sudo apt update'
+sudo wget https://download.qgis.org/downloads/qgis-archive-keyring.gpg
+gpg --no-default-keyring --keyring ./qgis-archive-keyring.gpg --list-keys
+sudo cp qgis-archive-keyring.gpg /etc/apt/keyrings/qgis-archive-keyring.gpg
+sudo wget -O /etc/apt/keyrings/qgis-archive-keyring.gpg https://download.qgis.org/downloads/qgis-archive-keyring.gpg
 
 sudo apt update
 sudo apt install qgis qgis-plugin-grass -y
