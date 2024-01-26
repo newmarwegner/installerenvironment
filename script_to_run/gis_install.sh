@@ -4,7 +4,7 @@ echo '### Update, Upgrading and Installing required packages ###'
 echo '##########################################################'
 echo '     ###############################################'
 sudo apt update && sudo apt upgrade -y
-sudo apt install -y pip make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev git lzma liblzma-dev
+sudo apt install -y pip make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev git lzma liblzma-dev tk-dev
 
 echo '### ADD Repository in etc and Installing QGIS SOFTWARE ###'
 echo '##########################################################'
