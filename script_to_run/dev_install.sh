@@ -6,8 +6,8 @@ echo '######## Installing Python 3.9.0 and set as global #######'
 echo '##########################################################'
 echo '     ###############################################'
 username=$(logname)
-pyenv install 3.9.0
-pyenv global 3.9.0
+pyenv install 3.12.0
+pyenv global 3.12.0
 
 echo '### Adding function to bashrc to automate venv activate ###'
 echo '##########################################################'
